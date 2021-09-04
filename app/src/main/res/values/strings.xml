@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">semana3</string>
+    <string name="configuracion">Configuracion</string>
+    <string name="escribe_tu_nombre_n_para_continuar">Escribe tu nombre \n para continuar</string>
+    <string name="continuar">Continuar</string>
+    <string name="nombre">Nombre</string>
 </resources>
