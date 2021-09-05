@@ -4,4 +4,11 @@
     <string name="escribe_tu_nombre_n_para_continuar">Escribe tu nombre \n para continuar</string>
     <string name="continuar">Continuar</string>
     <string name="nombre">Nombre</string>
+    <string name="calcular">Calcular</string>
+    <string name="proyecto_parcial_2">Proyecto Parcial 2</string>
+    <string name="proyecto_parcial_1">Proyecto Parcial 1</string>
+    <string name="c_lculo_de_nota">Cálculo de nota</string>
+    <string name="parcial_1">Parcial 1</string>
+    <string name="parcial_2">Parcial 2</string>
+    <string name="quices">Quices</string>
 </resources>

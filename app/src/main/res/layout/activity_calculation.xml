@@ -18,12 +18,15 @@
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
         android:ems="10"
-        android:hint="Parcial 2"
+        android:hint="@string/parcial_2"
+        android:hintTextColor="#757575"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/parcial1" />
+        app:layout_constraintTop_toBottomOf="@+id/parcial1"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/quices"
@@ -35,12 +38,14 @@
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
         android:ems="10"
-        android:hint="Quices"
+        android:hint="@string/quices"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/proyecto2" />
+        app:layout_constraintTop_toBottomOf="@+id/proyecto2"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/parcial1"
@@ -52,19 +57,22 @@
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
         android:ems="10"
-        android:hint="Parcial 1"
+        android:hint="@string/parcial_1"
+        android:hintTextColor="#757575"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quices" />
+        app:layout_constraintTop_toBottomOf="@+id/quices"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="95dp"
-        android:text="Cálculo de nota"
+        android:text="@string/c_lculo_de_nota"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,13 +85,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginLeft="100dp"
+        android:layout_marginTop="65dp"
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
-        android:text="Calcular"
+        android:text="@string/calcular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="589dp" />
+        app:layout_constraintTop_toBottomOf="@+id/parcial2" />
 
     <EditText
         android:id="@+id/proyecto1"
@@ -94,9 +103,12 @@
         android:layout_marginTop="185dp"
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Proyecto Parcial 1"
+        android:hint="@string/proyecto_parcial_1"
+        android:hintTextColor="#757575"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -110,11 +122,15 @@
         android:layout_marginTop="25dp"
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Proyecto Parcial 2"
+        android:hint="@string/proyecto_parcial_2"
+        android:hintTextColor="#757575"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/proyecto1" />
+        app:layout_constraintTop_toBottomOf="@+id/proyecto1"
+        tools:ignore="TextContrastCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

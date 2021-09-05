@@ -9,7 +9,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button buttonConfig, buttonContinuar;
+    private Button buttonConfig, continueBtn;
     private EditText textNombre;
     private ConstraintLayout mainLayout;
 
