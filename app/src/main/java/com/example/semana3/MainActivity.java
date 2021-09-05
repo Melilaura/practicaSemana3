@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -29,17 +30,16 @@ public class MainActivity extends AppCompatActivity {
         mainLayout = findViewById(R.id.mainLayout);
 
         buttonConfig.setOnClickListener(
-                (v) -> {
-                    Intent ConfigActivity = new Intent(this, ConfigActivity.class);
-                    startActivity(ConfigActivity);
+                (View view) ->{
+                    Intent configActivity = new Intent(this, ConfigActivity.class);
+                    startActivity(configActivity);
                 }
         );
 
-        buttonContinuar.setOnClickListener(
-                (v) -> {
-                    String name = textNombre.getText().toString();
+        buttonContinuar.setOnClickListener(                (view) -> {
+                    String nombreString = textNombre.getText().toString();
                     Intent calculationActivity = new Intent(this, CalculationActivity.class);
-                    calculationActivity.putExtra("name", name);
+                    calculationActivity.putExtra("nombre", nombreString);
                     startActivity(calculationActivity);
                     textNombre.getText().clear();
                 }

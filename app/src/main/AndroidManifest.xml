@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Semana3">
         <activity
+            android:name=".ResultActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CalculationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ConfigActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

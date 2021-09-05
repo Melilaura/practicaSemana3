@@ -16,14 +16,15 @@ public class CalculationActivity extends AppCompatActivity {
     private ConstraintLayout calculoLayout;
     private EditText proyecto1, proyecto2, quices, parcial1, parcial2;
     private Button buttonCalcular;
-    private String nombre;
-    private double proyecto1D, proyecto2D, quicesD, parcial1D, parcial2D, nota;
-    private boolean notasCompletas;
+    private String nombreString, notaFinalString;
+    private double proyecto1Double, proyecto2Double, quicesDouble, parcial1Double, parcial2Double, notaFinal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculation);
+
+        calculoLayout = findViewById(R.id.calculoLayout);
 
         proyecto1 = findViewById(R.id.proyecto1);
         proyecto2 = findViewById(R.id.proyecto2);
@@ -31,32 +32,26 @@ public class CalculationActivity extends AppCompatActivity {
         parcial1 = findViewById(R.id.parcial1);
         parcial2 = findViewById(R.id.parcial2);
         buttonCalcular = findViewById(R.id.buttonCalcular);
-        calculoLayout = findViewById(R.id.calculoLayout);
 
-        nombre = getIntent().getExtras().getString("name");
+        nombreString = getIntent().getExtras().getString("nombre");
+
 
         buttonCalcular.setOnClickListener(
                 (v) -> {
-                    try {
-                        proyecto1D = Double.parseDouble(proyecto1.getText().toString());
-                        proyecto2D = Double.parseDouble( proyecto2.getText().toString());
-                        quicesD = Double.parseDouble(quices.getText().toString());
-                        parcial1D = Double.parseDouble(parcial1.getText().toString());
-                        parcial2D = Double.parseDouble(parcial2.getText().toString());
-                        notasCompletas = true;
-                    } catch (NumberFormatException e) {
-                        Toast.makeText(this, "Intente denuevo", Toast.LENGTH_SHORT).show();
-                        notasCompletas = false;
-                    }
-                    nota = ((proyecto1D*0.20) + (proyecto2D*0.20) + (quicesD*0.20) + ( parcial1D*0.20) + (parcial2D*0.20));
+                    proyecto1Double = Double.parseDouble(proyecto1.getText().toString());
+                    proyecto2Double = Double.parseDouble( proyecto2.getText().toString());
+                    quicesDouble = Double.parseDouble(quices.getText().toString());
+                    parcial1Double = Double.parseDouble(parcial1.getText().toString());
+                    parcial2Double = Double.parseDouble(parcial2.getText().toString());
 
-                    if (notasCompletas){
-                        Intent resultActivity = new Intent(this, com.example.semana3.ResultActivity.class);
-                        resultActivity.putExtra("nota",  nota);
-                        resultActivity.putExtra("nombre", nombre);
-                        startActivity(resultActivity);
-                        finish();
-                    }
+                    notaFinal = ((proyecto1Double*0.20) + (proyecto2Double*0.20) + (quicesDouble*0.20) + ( parcial1Double*0.20) + (parcial2Double*0.20));
+
+                    notaFinalString= String.valueOf(notaFinal);
+
+                    Intent resultActivity = new Intent(this, ResultActivity.class);
+                    resultActivity.putExtra("nota Final",  notaFinalString);
+                    resultActivity.putExtra("nombre", nombreString);
+                    startActivity(resultActivity);
                 }
         );
     }
