@@ -20,7 +20,8 @@
         app:layout_constraintBottom_toTopOf="@+id/textNombre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center_horizontal" />
 
     <Button
         android:id="@+id/buttonContinuar"
